@@ -1,0 +1,21 @@
+// Use BrowserStack to test your script across different browsers. Modify Selenium setup to work with BrowserStack //
+
+
+from selenium import webdriver
+
+capabilities = {
+    'browserName': 'Chrome',                               // can be changed with different browser as well // 
+    'browserVersion': 'latest',
+    'bstack:options': {
+        'os': 'Windows',                                   // same with Operating System // 
+        'osVersion': '10',
+        'resolution': '1920x1080',
+        'userName': 'your_browserstack_username',
+        'accessKey': 'your_browserstack_access_key'
+    }
+}
+
+driver = webdriver.Remote(
+    command_executor='https://hub-cloud.browserstack.com/wd/hub',
+    desired_capabilities=capabilities
+)
