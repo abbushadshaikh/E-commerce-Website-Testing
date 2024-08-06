@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome()
-driver.get("http://your-ecommerce-site.com")
+driver.get("https://www.alibaba.com")
 
 # Search for a product
 search_box = driver.find_element(By.NAME, "q")
